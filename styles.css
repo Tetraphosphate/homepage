@@ -7,7 +7,11 @@
     height: var(--element-height);}
 
 .lifegoals:hover, .lifegoals:visited:hover {
-    text-decoration: none,}
+    text-decoration: none,
+    color: #f04937;}
+
+.lifegoals {
+    color: #f04937;}
 
 #footer {
     background-color: #333;
