@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="new.ico">
+        <title>New Tab</title>
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="content">
+            <div id="parallax">
+                <div id="todo">
+                    <h1 id="lifegoals">Life Goals</h1>
+                    <ol id="list">
+                        <li id="next">English</li>
+                        <li>Sad Trombone poster 2nd year anniversary!! - 3rd Sept</li>
+                        <li>Teach Elsie piano - starting Monday 3th Sept</li>
+                        <li>Soiree - 4th Sept</li>
+                        <li>Maths algebra thing</li>
+                        <li>Study for NCEA</li>
+                        <li>Eat less chocolate and do more exercise</li>
+                        <li>Flute ensemble thing</li>
+                        <li>Join orchestra - 19th Sept</li>
+                        <li>Pass grade 8 piano with merit - 30th Oct</li>
+                        <li>Never play piano ever again</li>
+                        <li>Prize-giving - early November</li>
+                        <li>NCEA externals</li>
+                        <li>Save up money for bass trombone</li>
+                        <li>Practice tenor trombone in year 12</li>
+                        <li>Sad Trombone poster 3rd year anniversary!! - 3rd Sept</li>
+                        <li>Learn bass trombone in year 13</li>
+                        <li>Practice lots</li>
+                        <li>Audition for 2020 musical?? Or play trombone??</li>
+                        <li>Design dress for year 13 ball</li>
+                        <li>NZSM audition form due July 2020</li>
+                        <li>If good enough, study bass trombone. If not good enough, study tenor trombone.</li>
+                        <li>Aim for scholarship</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="welcome">
+                    <h2 id="title">Welcome to the Bifrost!</h2>
+                    <p id="motd">[Insert Message of the Day here]</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        // generate a random trombone message-of-the-day and print it into the #motd element
+        var motdlist = [
+            "Never look at the trombones, you'll only encourage them. - Richard Strauss [misquote]", 
+            "One of his passions in life was his trombone. - Dick Emberly",
+            "Back away from the trombone and no one gets hurt.",
+            "A day without trombone probably won't kill me, but why risk it?",
+            "When I started out, all I did was play my trombone. - Ray Conniff",
+            "Eat, sleep, trombone.",
+            "Come to the dark side..... we have trombones.",
+            "Trombones are cool."]
+        function setQuote() {document.getElementById("motd").innerHTML = motdlist[Math.floor((Math.random() * motdlist.length))];}
+        setQuote();
+    </script>
+
+    <style>
+
+        #parallax {
+            background-image: url("heimdall-observatory.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: var(--element-height);}
+
+        #footer {
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 100%;}
+
+        #lifegoals {
+            font-family: "Inconsolata", monospace;
+            color: #f04937;
+            font-size: 160px;
+        }
+
+        * {
+            margin: 0;}
+
+        #content, html, body {
+            height: 100%;
+            width: 100%;
+            background-color: #333;}
+
+        #welcome {
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            display: table;
+            color: white;}
+
+        #title {
+            font-family: "Inconsolata", monospace;
+            font-size: 30px;
+            font-weight: bold;
+            display: table-cell;}
+
+        #motd {
+            padding-left: 30px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            color: #f04937;
+            display: table-cell;}
+
+        #todo {
+            font-family: "Montserrat", monospace;
+            font-size: 60px;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-left: 160px;
+            padding-right: 50px;
+            padding-bottom: 100px;
+            color: white;}
+
+        .done {
+            color: #999;
+        }
+    </style>
+</html>
