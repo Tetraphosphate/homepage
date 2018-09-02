@@ -4,6 +4,7 @@
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 
     <body>
@@ -61,70 +62,4 @@
         function setQuote() {document.getElementById("motd").innerHTML = motdlist[Math.floor((Math.random() * motdlist.length))];}
         setQuote();
     </script>
-
-    <style>
-
-        #parallax {
-            background-image: url("heimdall-observatory.png");
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: var(--element-height);}
-
-        #footer {
-            background-color: #333;
-            position: fixed;
-            bottom: 0;
-            width: 100%;}
-
-        #lifegoals {
-            font-family: "Inconsolata", monospace;
-            color: #f04937;
-            font-size: 160px;
-        }
-
-        * {
-            margin: 0;}
-
-        #content, html, body {
-            height: 100%;
-            width: 100%;
-            background-color: #333;}
-
-        #welcome {
-            margin-left: 15%;
-            margin-right: 15%;
-            margin-top: 25px;
-            margin-bottom: 25px;
-            display: table;
-            color: white;}
-
-        #title {
-            font-family: "Inconsolata", monospace;
-            font-size: 30px;
-            font-weight: bold;
-            display: table-cell;}
-
-        #motd {
-            padding-left: 30px;
-            font-family: "Montserrat", sans-serif;
-            font-size: 12px;
-            color: #f04937;
-            display: table-cell;}
-
-        #todo {
-            font-family: "Montserrat", monospace;
-            font-size: 60px;
-            font-weight: bold;
-            padding-top: 20px;
-            padding-left: 160px;
-            padding-right: 50px;
-            padding-bottom: 100px;
-            color: white;}
-
-        .done {
-            color: #999;
-        }
-    </style>
 </html>
