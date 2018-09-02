@@ -6,13 +6,6 @@
     background-size: cover;
     height: var(--element-height);}
 
-.lifegoals:hover, .lifegoals:visited:hover {
-    text-decoration: none,
-    color: #f04937;}
-
-.lifegoals {
-    color: #f04937;}
-
 #footer {
     background-color: #333;
     position: fixed;
@@ -74,3 +67,10 @@ a, a:visited {
 a:hover, a:visited:hover {
     text-decoration: underline;
     color: white;}
+
+.lifegoals:hover, .lifegoals:visited:hover {
+    text-decoration: none,
+    color: #f04937;}
+
+.lifegoals {
+    color: #f04937;}
