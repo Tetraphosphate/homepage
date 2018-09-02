@@ -6,6 +6,9 @@
     background-size: cover;
     height: var(--element-height);}
 
+.lifegoals:hover, .lifegoals:visited:hover {
+    text-decoration: none,}
+
 #footer {
     background-color: #333;
     position: fixed;
