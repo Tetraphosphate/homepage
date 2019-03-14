@@ -6,6 +6,16 @@
     background-size: cover;
     height: var(--element-height);}
 
+.hovering {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(60%, -50%);}
+
+.hovering:hover {
+    border: #f04937 5px solid;
+    border-radius: 2px;}
+
 #footer {
     background-color: #333;
     position: fixed;
