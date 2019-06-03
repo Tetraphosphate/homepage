@@ -154,10 +154,12 @@
                 case 37:
                     currentImage--;
                     if (currentImage < 0) {currentImage = currentImage + images.length;}
+                    console.log(currentImage);
                     break;
                 case 39:
                     currentImage++;
                     if (currentImage < images.length) {currentImage = 0;}
+                    console.log(currentImage);
                     break;
             }
             document.getElementById("parallax").style.backgroundImage = "url('" + images[currentImage] + "')";
