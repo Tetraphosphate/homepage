@@ -6,6 +6,10 @@
     background-size: cover;
     height: var(--element-height);}
 
+.hidden {
+    display: none;
+}
+
 .hovering {
     position: fixed;
     top: 50%;
