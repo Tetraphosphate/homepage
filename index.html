@@ -96,13 +96,17 @@
             <div id="footer">
                 <div id="welcome">
                     <h2 id="title" onclick="toggleToDoList()">Welcome to the Bifrost!</h2>
-                    <p id="motd">[Insert Message of the Day here]</p>
+                    <p id="motd" onclick="jumpToNext()">[Insert Message of the Day here]</p>
                 </div>
             </div>
         </div>
     </body>
 
     <script>
+        function jumpToNext() {
+            window.open("#next","_self")
+        }
+        
         function toggleToDoList() {
             var element = document.getElementById("todo");
             element.classList.toggle("hidden");
