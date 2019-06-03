@@ -7,7 +7,7 @@
     height: var(--element-height);}
 
 .hidden {
-    color: transparent;
+    opacity: 0;
 }
 
 .hovering {
