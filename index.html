@@ -144,11 +144,27 @@
             "thanos-sword.png"
         ]
         
-        function setBackground() {
+        var currentImage = 0;
+        
+        /* function setBackground() {
             var background = images[Math.floor((Math.random() * images.length))];
             document.getElementById("parallax").style.backgroundImage = "url('" + background + "')";}
-        setBackground();
+        setBackground(); */
         
-        //I started playing when I was 10 and in the beginning the sounds weren't great and I wanted to sound great so I practiced a lot. And I wasn't really forced to practice. I loved the sound of this instrument and I really enjoyed doing it and as a result of that I did it a lot. You know, often times when my friends were out playing football and baseball I would be in playing scales, playing my major scales, practicing my scales and eventually, you know, after a year or two of steady daily practice my sound improved, I started being able to play in tune a little better and my facility on the instrument, my slide technique got better and better and it actually started getting fun after lots of daily consistent practice.
+        document.onkeydown = function(event) {
+            switch (event.keyCode) {
+                case 37:
+                    currentImage--;
+                    if (currentImage < 0) {currentImage = currentImage + images.length;}
+                    break;
+                case 39:
+                    currentImage++;
+                    if (currentImage < images.length) {currentImage = 0;}
+                    break;
+            }
+            document.getElementById("parallax").style.backgroundImage = "url('" + images[currentImage] + "')";
+        }
+        
+        // I started playing when I was 10 and in the beginning the sounds weren't great and I wanted to sound great so I practiced a lot. And I wasn't really forced to practice. I loved the sound of this instrument and I really enjoyed doing it and as a result of that I did it a lot. You know, often times when my friends were out playing football and baseball I would be in playing scales, playing my major scales, practicing my scales and eventually, you know, after a year or two of steady daily practice my sound improved, I started being able to play in tune a little better and my facility on the instrument, my slide technique got better and better and it actually started getting fun after lots of daily consistent practice.
     </script>
 </html>
