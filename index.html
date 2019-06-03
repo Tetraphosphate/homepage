@@ -94,7 +94,7 @@
             </div>
             <div id="footer">
                 <div id="welcome">
-                    <h2 id="title">Welcome to the Bifrost!</h2>
+                    <h2 id="title" onclick="toggleToDoList()">Welcome to the Bifrost!</h2>
                     <p id="motd">[Insert Message of the Day here]</p>
                 </div>
             </div>
@@ -102,6 +102,10 @@
     </body>
 
     <script>
+        function toggleToDoList() {
+            var element = document.getElementById("todo");
+            element.classList.toggle("hidden");
+        }
         // generate a random trombone message-of-the-day and print it into the #motd element
         var motdlist = [
             "Never look at the trombones, you'll only encourage them - Richard Strauss [misquote]", 
