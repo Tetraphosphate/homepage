@@ -7,8 +7,7 @@
     height: var(--element-height);}
 
 .hidden {
-    opacity: 0;
-}
+    opacity: 0;}
 
 .hovering {
     position: fixed;
@@ -29,8 +28,7 @@
 #lifegoals {
     font-family: "Inconsolata", monospace;
     color: #f04937;
-    font-size: 160px;
-}
+    font-size: 160px;}
 
 * {
     margin: 0;}
