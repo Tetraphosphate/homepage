@@ -8,7 +8,8 @@
 }
 
 @media screen and (max-device-width: 1024px) {
-    background-attachment: scroll}
+    #parallax {
+        background-attachment: scroll}}
 
 .hidden {
     display: none}
