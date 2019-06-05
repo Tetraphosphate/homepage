@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- 4 -->
+        <!-- 5 -->
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -201,7 +201,7 @@
             var yDiff = yDown - yUp;
         
             if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-                if ( xDiff > 100 ) {
+                if ( xDiff > 0 ) {
                     /* left swipe */ 
                     currentImage++;
                     if (currentImage >= images.length) {currentImage = 0;}
