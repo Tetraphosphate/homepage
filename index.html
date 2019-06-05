@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- 2 -->
+        <!-- 3 -->
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -156,12 +156,12 @@
         
         document.onkeydown = function(event) {
             switch (event.keyCode) {
-                case 37:
+                case 37: // left
                     currentImage--;
                     if (currentImage < 0) {currentImage = currentImage + images.length;}
                     console.log(currentImage);
                     break;
-                case 39:
+                case 39: // right
                     currentImage++;
                     if (currentImage >= images.length) {currentImage = 0;}
                     console.log(currentImage);
@@ -169,6 +169,8 @@
             }
             document.getElementById("parallax").style.backgroundImage = "url('" + images[currentImage] + "')";
         }
+        
+        // ******************** //
         
         document.addEventListener('touchstart', handleTouchStart, false);        
         document.addEventListener('touchmove', handleTouchMove, false);
@@ -201,9 +203,16 @@
             if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
                 if ( xDiff > 0 ) {
                     /* left swipe */ 
+                    currentImage--;
+                    if (currentImage < 0) {currentImage = currentImage + images.length;}
+                    console.log(currentImage);
                 } else {
                     /* right swipe */
-                }                       
+                    currentImage++;
+                    if (currentImage >= images.length) {currentImage = 0;}
+                    console.log(currentImage);
+                }
+                document.getElementById("parallax").style.backgroundImage = "url('" + images[currentImage] + "')";
             } else {
                 if ( yDiff > 0 ) {
                     /* up swipe */ 
