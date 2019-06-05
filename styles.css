@@ -1,4 +1,4 @@
-/* 1 */
+/* 2 */
 #parallax {
     background-image: url("thanos-sword.png");
     background-attachment: fixed;
@@ -80,6 +80,9 @@
 
 .done {
     color: #999;}
+
+.skipped {
+    color: #C57168;}
 
 a, a:visited {
     text-decoration: none;
