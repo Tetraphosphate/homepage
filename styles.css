@@ -84,6 +84,9 @@
 .skipped {
     color: #C57168;}
 
+.skipped a {
+    color: #DE8B82;}
+
 a, a:visited {
     text-decoration: none;
     color: #cccccc;}
