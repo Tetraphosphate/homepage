@@ -201,15 +201,15 @@
             var yDiff = yDown - yUp;
         
             if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-                if ( xDiff > 0 ) {
+                if ( xDiff > 1 ) {
                     /* left swipe */ 
-                    currentImage--;
-                    if (currentImage < 0) {currentImage = currentImage + images.length;}
+                    currentImage++;
+                    if (currentImage >= images.length) {currentImage = 0;}
                     console.log(currentImage);
                 } else {
                     /* right swipe */
-                    currentImage++;
-                    if (currentImage >= images.length) {currentImage = 0;}
+                    currentImage--;
+                    if (currentImage < 0) {currentImage = currentImage + images.length;}
                     console.log(currentImage);
                 }
                 document.getElementById("parallax").style.backgroundImage = "url('" + images[currentImage] + "')";
