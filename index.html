@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>console.log("Now Launching: 'whyyy'");</script>
+        <script>console.log("Now Launching: 'turtle and mouse'");</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -178,7 +178,11 @@
         document.onkeydown = function(event) {
             switch (event.keyCode) {
                 case 81:
-                    // q
+                    // q for quote
+                    setQuote();
+                    break;
+                case 87:
+                    // w for show/hide
                     toggleCount++;
                     if (toggleCount > 3) {toggleCount = 1;}
                     toggleToDoList();
