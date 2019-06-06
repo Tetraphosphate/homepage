@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>console.log("Now Launching: 'rip'");</script>
+        <script>console.log("Now Launching: 'the captionator'");</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -117,16 +117,20 @@
             if (toggleCount == 0) {
                 // hidden
                 todo.classList.remove("hidden");
+                console.log("Text shown");
             }
             if (toggleCount == 1) {
                 // jump
                 jumpToNext();
+                console.log("Jumped to next");
             }
             if (toggleCount == 2) {
                 // hide
                 todo.classList.add("hidden");
+                console.log("Text hidden");
             }
         }
+        
         // generate a random trombone message-of-the-day and print it into the #motd element
         var motdlist = [
             "Never look at the trombones, you'll only encourage them - Richard Strauss [misquote]", 
@@ -153,6 +157,7 @@
         
         function setQuote() {
             document.getElementById("motd").innerHTML = motdlist[Math.floor((Math.random() * motdlist.length))];
+            console.log("Quote updated");
         }
         setQuote();
         
@@ -191,13 +196,13 @@
                     // e is for edit! eh eh eh!
                     window.open("https://github.com/Tetraphosphate/homepage/edit/master/index.html","_parent");
                 case 37:
-                    // previous
+                    // previous background
                     currentImage--;
                     if (currentImage < 0) {currentImage = currentImage + images.length;}
                     console.log(currentImage + ": " + images[currentImage]);
                     break;
                 case 39:
-                    // next
+                    // next background
                     currentImage++;
                     if (currentImage >= images.length) {currentImage = 0;}
                     console.log(currentImage + ": " + images[currentImage]);
@@ -206,17 +211,14 @@
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
         }
         
-        // ******************** //
-        
+        // code for swiping        
         document.addEventListener('touchstart', handleTouchStart, false);        
         document.addEventListener('touchmove', handleTouchMove, false);
         var xDown = null;
-        
         function getTouches(evt) {
           return evt.touches ||             // browser API
                  evt.originalEvent.touches; // jQuery
-        }
-        
+        }                                                    
         function handleTouchStart(evt) {
             const firstTouch = getTouches(evt)[0];                                      
             xDown = firstTouch.clientX;                                                                           
@@ -227,12 +229,12 @@
             var xUp = evt.touches[0].clientX;
             var xDiff = xDown - xUp;
             if ( xDiff > 0 ) {
-                // next
+                // next background
                 currentImage++;
                 if (currentImage >= images.length) {currentImage = 0;}
                 console.log(currentImage);
             } else {
-                // previous
+                // previous background
                 currentImage--;
                 if (currentImage < 0) {currentImage = currentImage + images.length;}
                 console.log(currentImage);
