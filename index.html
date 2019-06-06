@@ -112,15 +112,15 @@
         var toggleCount = 0;
         function toggleToDoList() {
             var todo = document.getElementById("todo");
-            if (count == 1) {
+            if (toggleCount == 1) {
                 // hidden
                 todo.classList.remove("hidden");
             }
-            if (count == 2) {
+            if (toggleCount == 2) {
                 // jump
                 jumpToNext();
             }
-            if (count == 3) {
+            if (toggleCount == 3) {
                 // hide
                 todo.classList.add("hidden");
             }
