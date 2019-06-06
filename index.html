@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>console.log("Now Launching: 'turtle and mouse'");</script>
+        <script>console.log("Now Launching: 'rip'");</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -112,15 +112,17 @@
         var toggleCount = 0;
         function toggleToDoList() {
             var todo = document.getElementById("todo");
-            if (toggleCount == 1) {
+            toggleCount++;
+            if (toggleCount > 2) {toggleCount = 0;}
+            if (toggleCount == 0) {
                 // hidden
                 todo.classList.remove("hidden");
             }
-            if (toggleCount == 2) {
+            if (toggleCount == 1) {
                 // jump
                 jumpToNext();
             }
-            if (toggleCount == 3) {
+            if (toggleCount == 2) {
                 // hide
                 todo.classList.add("hidden");
             }
@@ -183,8 +185,6 @@
                     break;
                 case 87:
                     // w for show/hide
-                    toggleCount++;
-                    if (toggleCount > 3) {toggleCount = 1;}
                     toggleToDoList();
                     break;
                 case 69:
