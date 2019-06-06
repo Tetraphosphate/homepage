@@ -8,10 +8,6 @@
     min-height: 100%;
 }
 
-@media screen and (max-device-width: 1024px) {
-    #parallax {
-        background-attachment: scroll}}
-
 .hidden {
     display: none}
 
