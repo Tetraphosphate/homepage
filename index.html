@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>console.log("Thanos Rising");</script>
+        <script>console.log("Now Launching: 'whyyy'");</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -184,19 +184,19 @@
                     toggleToDoList();
                     break;
                 case 69:
-                    // e
-                    window.open("https://github.com/Tetraphosphate/homepage/edit/master/index.html","_base");
+                    // e is for edit! eh eh eh!
+                    window.open("https://github.com/Tetraphosphate/homepage/edit/master/index.html","_parent");
                 case 37:
                     // previous
                     currentImage--;
                     if (currentImage < 0) {currentImage = currentImage + images.length;}
-                    console.log(currentImage);
+                    console.log(currentImage + ": " + images[currentImage]);
                     break;
                 case 39:
                     // next
                     currentImage++;
                     if (currentImage >= images.length) {currentImage = 0;}
-                    console.log(currentImage);
+                    console.log(currentImage + ": " + images[currentImage]);
                     break;
             }
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
