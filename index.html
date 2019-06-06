@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- 12345678 -->
+        <!-- sdfsdfsd -->
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -163,13 +163,12 @@
         }
         setBackground();
         
-        var jump = false;
         document.onkeydown = function(event) {
             switch (event.keyCode) {
                 case 32:
                     // spacebar
                     toggleToDoList();
-                    jump = true;
+                    setTimeout(jumpToNext(), 4000);
                     break;
                 case 37:
                     // previous
@@ -185,7 +184,6 @@
                     break;
             }
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
-            if (jump) {jumpToNext();}
         }
         
         // ******************** //
