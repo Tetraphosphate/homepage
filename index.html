@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- q -->
+        <!-- q.0 -->
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -106,12 +106,24 @@
 
     <script>
         function jumpToNext() {
-            window.open("#next","_self")
+            window.open("#next","_self");
         }
         
+        var toggleCount = 0;
         function toggleToDoList() {
-            var element = document.getElementById("todo");
-            element.classList.toggle("hidden");
+            var todo = document.getElementById("todo");
+            if (count == 1) {
+                // hidden
+                todo.classList.remove("hidden");
+            }
+            if (count == 2) {
+                // jump
+                jumpToNext();
+            }
+            if (count == 3) {
+                // hide
+                todo.classList.add("hidden");
+            }
         }
         // generate a random trombone message-of-the-day and print it into the #motd element
         var motdlist = [
@@ -167,8 +179,9 @@
             switch (event.keyCode) {
                 case 81:
                     // q
+                    toggleCount++;
+                    if (toggleCount > 3) {toggleCount = 0;}
                     toggleToDoList();
-                    jumpToNext();
                     break;
                 case 37:
                     // previous
