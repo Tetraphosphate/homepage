@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- 8 -->
+        <!-- 6 -->
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -164,12 +164,12 @@
         setBackground();
         
         document.onkeydown = function(event) {
-            if (event.keyCode == 32 && event.target == document.body) {
-                e.preventDefault();
-                toggleToDoList();
-                jumpToNext();
-            }
             switch (event.keyCode) {
+                case 32:
+                    // spacebar
+                    toggleToDoList();
+                    jumpToNext();
+                    break;
                 case 37:
                     // previous
                     currentImage--;
