@@ -1,4 +1,4 @@
-/* Ladadida ladadida ladadida ladadida */
+/* Thanos Falling */
 #parallax {
     background-image: url("./images/thanos-sword.png");
     background-attachment: fixed;
@@ -23,7 +23,13 @@
 
 #version {
     display: block;
-    position: absolute;}
+    position: fixed;
+    right: 0;
+    color: #f04937;
+    background: #f0493733;
+    font-family: Inconsolata;
+    font-weight: bold;
+    padding: 1px 5px;}
 
 #footer {
     background-color: #333;
