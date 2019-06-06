@@ -164,15 +164,12 @@
         setBackground();
         
         document.onkeydown = function(event) {
+            if (event.keyCode == 32 && event.target == document.body) {
+                e.preventDefault();
+                toggleToDoList();
+                jumpToNext();
+            }
             switch (event.keyCode) {
-                case 32:
-                    // spacebar
-                    if(event.target == document.body) {
-                        e.preventDefault();
-                        toggleToDoList();
-                        jumpToNext();
-                    }
-                    break;
                 case 37:
                     // previous
                     currentImage--;
