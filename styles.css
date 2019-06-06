@@ -1,4 +1,4 @@
-/* 2 */
+/* Ladadida ladadida ladadida ladadida */
 #parallax {
     background-image: url("./images/thanos-sword.png");
     background-attachment: fixed;
@@ -24,6 +24,10 @@
 .hovering:hover {
     border: #f04937 5px solid;
     border-radius: 2px;}
+
+#version {
+    display: block;
+    position: absolute;}
 
 #footer {
     background-color: #333;
