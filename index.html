@@ -160,6 +160,7 @@
             // set a random background on load
             currentImage = Math.floor((Math.random() * images.length))
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
+        }
         setBackground();
         
         document.onkeydown = function(event) {
