@@ -167,8 +167,11 @@
             switch (event.keyCode) {
                 case 32:
                     // spacebar
-                    toggleToDoList();
-                    jumpToNext();
+                    if(event.target == document.body) {
+                        e.preventDefault();
+                        toggleToDoList();
+                        jumpToNext();
+                    }
                     break;
                 case 37:
                     // previous
