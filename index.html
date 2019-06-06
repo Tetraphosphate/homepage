@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>var version = "Thanos Falling";</script>
+        <script>var versionId = "1.0"; var versionName = "Thanos Falling";</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -106,8 +106,8 @@
     </body>
 
     <script>
-        console.log("Now Launching: '" + version + "'");
-        document.getElementById("version").innerHTML = version;
+        console.log("Now Launching: #" + versionId + ": '" + versionName + "'");
+        document.getElementById("version").innerHTML = "#" + versionId + ": '" + versionName + "'";
         
         function jumpToNext() {
             window.open("#next","_self");
