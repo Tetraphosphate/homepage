@@ -165,10 +165,10 @@
         
         document.onkeydown = function(event) {
             switch (event.keyCode) {
-                case 32:
-                    // spacebar
+                case 81:
+                    // q
                     toggleToDoList();
-                    setTimeout(jumpToNext(), 4000);
+                    jumpToNext();
                     break;
                 case 37:
                     // previous
