@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>var versionId = "1.0.0"; var versionName = "Thanos Falling";</script>
+        <script>var versionId = "1.0.1"; var versionName = "Flerken";</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -189,12 +189,12 @@
         
         document.onkeydown = function(event) {
             switch (event.keyCode) {
-                case 81:
-                    // q for quote
-                    setQuote();
-                    break;
                 case 87:
                     // w for show/hide
+                    setQuote();
+                    break;
+                case 81:
+                    // q for quote
                     toggleToDoList();
                     break;
                 case 69:
