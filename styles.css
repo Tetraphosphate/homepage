@@ -84,6 +84,15 @@
     padding-bottom: 100px;
     color: white;}
 
+.urgent {
+    color: #f04937;}
+
+.urgent > a, .urgent > a:visited {
+    color: #C57168;}
+
+.urgent > a:hover, .urgent > a:visited:hover {
+    color: #f04937;}
+
 .done {
     color: #999;}
 
