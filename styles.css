@@ -84,31 +84,22 @@
     padding-bottom: 100px;
     color: white;}
 
-.urgent {
-    color: #f04937;}
-
 .urgent > a, .urgent > a:visited {
-    color: #C57168;}
+    color: #d02a1b;}
 
-.urgent > a:hover, .urgent > a:visited:hover {
+.urgent, .urgent > a:hover, .urgent > a:visited:hover {
     color: #f04937;}
-
-.done {
-    color: #999;}
 
 .done > a, .done > a:visited {
     color: #777;}
 
-.done > a:hover, .done > a:visited:hover {
+.done, .done > a:hover, .done > a:visited:hover {
     color: #999;}
-
-.skipped {
-    color: #C57168;}
 
 .skipped > a, .skipped > a:visited {
     color: #AF8581;}
 
-.skipped > a:hover, .skipped > a:visited:hover {
+.skipped, .skipped > a:hover, .skipped > a:visited:hover {
     color: #C57168;}
 
 a, a:visited {
