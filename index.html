@@ -168,7 +168,8 @@
             "I am inevitable - Thanos",
             "By the Hoary Hosts of Hoggoth! - Doctor Strange",
             "Bloons a problem? Here's the solution!",
-            "I used the stones... to destroy the stones. - Thanos"
+            "I used the stones... to destroy the stones. - Thanos",
+            "e is for edit! eh! eh! eh!"
         ]
         
         function setQuote() {
@@ -232,6 +233,25 @@
                     currentImage++;
                     if (currentImage >= images.length) {currentImage = 0;}
                     console.log(currentImage + ": " + images[currentImage]);
+                    break;
+                case 82:
+                    // r for changing background
+                    setBackground();
+                    break;
+                case 49:
+                    // switch to background 1
+                    currentImage = 0;
+                    document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
+                    break;
+                case 50:
+                    // switch to background 2
+                    currentImage = 1;
+                    document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
+                    break;
+                case 51:
+                    // switch to background 3
+                    currentImage = 2;
+                    document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
                     break;
             }
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
