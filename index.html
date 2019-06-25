@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script>var versionId = "1.1.0"; var versionName = "Blue Space Hippie";</script>
+        <script>var versionId = "1.1.1"; var versionName = "Magneto Magnetoing";</script>
         <link rel="icon" href="new.ico">
         <title>New Tab</title>
         <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat" rel="stylesheet">
@@ -217,7 +217,7 @@
             currentImage = Math.floor((Math.random() * images.length))
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
         }
-        setBackground();
+        // setBackground(); // turned off so that each time homepage is launched a new wallpaper is not picked 
         
         document.onkeydown = function(event) {
             switch (event.keyCode) {
@@ -231,7 +231,7 @@
                     break;
                 case 69:
                     // e is for edit! eh eh eh!
-                    window.open("https://github.com/Tetraphosphate/homepage/edit/master/index.html","_parent");
+                    window.open("https://github.com/Tetraphosphate/homepage/edit/master/index.html", "_parent");
                 case 37:
                     // previous background
                     currentImage--;
