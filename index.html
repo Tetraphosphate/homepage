@@ -224,7 +224,8 @@
             "star-lord.jpg",
             "ugliest-faces.jpg",
             "original-guardians.jpg",
-            "oil-refinery.jpg"
+            "oil-refinery.jpg",
+            "aethelwulf-vikings.jpg"
         ]
         
         // ******************** //
@@ -236,7 +237,7 @@
             currentImage = Math.floor((Math.random() * images.length))
             document.getElementById("parallax").style.backgroundImage = "url('./images/" + images[currentImage] + "')";
         }
-        // setBackground(); // turned off so that each time homepage is launched a new wallpaper is not picked 
+        setBackground(); // turned off so that each time homepage is launched a new wallpaper is not picked (now on)
         
         document.onkeydown = function(event) {
             switch (event.keyCode) {
